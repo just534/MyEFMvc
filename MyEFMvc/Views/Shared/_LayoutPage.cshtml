@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+    @RenderSection("style", false);
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/Content/layui/layui.js"></script>
+    @RenderSection("script", false);
+</body>
+</html>
