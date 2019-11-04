@@ -1,18 +1,52 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = null;
+    ViewBag.Title = "绍兴柯桥东宁纺织品ERP";
 }
-    <div class="layui-layout-admin">
-        <div class="layui-header">
-            <div class="layui-logo">
-
-
-                <img src="~/Static/images/东宁纺织logo-01.png" alt="Alternate Text" class="layui-nav-img layui-bg-orange" />
-                LayUi后台管理系统
-            </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Content/easyui/jquery.min.js"></script>
+    <script src="~/Content/easyui/jquery.easyui.min.js"></script>
+    <script src="~/Content/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="~/Content/easyui/themes/default/easyui.css" id="lk">
+    <link rel="stylesheet" href="~/Content/easyui/themes/icon.css">
+    <link rel="stylesheet" href="~/Content/easyui/themes/color.css">
+    <script src="~/Content/easyui/extend/jquery.cookie.js"></script>           <!-- 用于cookie处理 -->
+    <script src="~/Content/easyui/extend/jquery.portal.js"></script>           <!-- 用于首页门户 -->
+    <script src="~/Content/easyui/extend/echarts.min.js"></script>             <!-- 用于生成图表 -->
+    <script src="~/Content/easyui/extend/datagrid-cellediting.js"></script>    <!-- 用于表中的单元格编辑 -->
+    <script src="~/Content/easyui/extend/datagrid-detailview.js"></script>     <!-- 用于展示行数据 -->
+    <script src="~/Content/easyui/extend/datagrid-filter.js"></script>         <!-- 用于表数据过滤 -->
+    <script src="~/Content/easyui/extend/datagrid-export.js"></script>         <!-- 用于表数据导出和打印 -->
+    <script src="~/Content/easyui/extend/jquery.pivotgrid.js"></script>
+</head>
+    <body class="easyui-layout">
+        <!-- 头部 -->
+        <div region="north" border=false height="80px">
+            <img src="~/Static/images/东宁纺织正方形logo-01.jpg" height="40px" style="margin: 10px 0 0 20px">
+            <div id="themes" style="margin:16px 20px 0 0;float: right"></div>
+            
         </div>
-        <div class="layui-side layui-bg-black">  </div>
-        <div class="layui-body">  </div>
-        <div class="layui-footer">  </div>
+        <!-- 底部 -->
+        <div region="south" border=false style="height: 26px;line-height: 26px;text-align: center;">
+            <div class="icon-man" style="float: left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div id="userinfo" style="float:left;"></div>
+            <div style="float:right">|&nbsp;&nbsp;源码版本2.0&nbsp;&nbsp;</div>
+            <div>邓马壮</div>
+        </div>
+        <!-- 左侧导航 -->
+        <div region="west" split=true width=180 title="系统导航菜单" iconCls="icon-menu">
+            <div id="menu"></div>
+        </div>
+        <!-- 内容部分 -->
+        <div region="center">
+            <div id="ts"></div>
+        </div>
+        <div id="dlg"></div>     <!-- 此div用于生成并加载切换用户用的登录窗口 -->
+        <!-- 调用的js文件 -->
+        <script src="~/Static/JS/Home/index.js"></script>
+    </body>
+</html>
 
-    </div>
-   

@@ -4,13 +4,24 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/Content/easyui/jquery.min.js"></script>
+    <script src="~/Content/easyui/jquery.easyui.min.js"></script>
+    <script src="~/Content/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="~/Content/easyui/themes/default/easyui.css" id="lk">
+    <link rel="stylesheet" href="~/Content/easyui/themes/icon.css">
+    <link rel="stylesheet" href="~/Content/easyui/themes/color.css">
+    <script src="~/Content/easyui/extend/jquery.cookie.js"></script>           <!-- 用于cookie处理 -->
+    <script src="~/Content/easyui/extend/jquery.portal.js"></script>           <!-- 用于首页门户 -->
+    <script src="~/Content/easyui/extend/echarts.min.js"></script>             <!-- 用于生成图表 -->
+    <script src="~/Content/easyui/extend/datagrid-cellediting.js"></script>    <!-- 用于表中的单元格编辑 -->
+    <script src="~/Content/easyui/extend/datagrid-detailview.js"></script>     <!-- 用于展示行数据 -->
+    <script src="~/Content/easyui/extend/datagrid-filter.js"></script>         <!-- 用于表数据过滤 -->
+    <script src="~/Content/easyui/extend/datagrid-export.js"></script>         <!-- 用于表数据导出和打印 -->
+    <script src="~/Content/easyui/extend/jquery.pivotgrid.js"></script>
     @RenderSection("style", false);
 </head>
-<body>
-    <div>
+<body class="layui-layout-body">
         @RenderBody()
-    </div>
     <script src="~/Content/layui/layui.js"></script>
     @RenderSection("script", false);
 </body>
